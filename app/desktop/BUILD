@@ -1,9 +1,9 @@
-load("//app:version.bzl", "PRODUCT")
-
 cc_binary(
-    name = PRODUCT,
+    name = "app",
     srcs = ["main.cpp"],
     deps = [
         "//shared/core:core",
+        "@glfw//:glfw"
     ],
+    linkopts = ["-lGL"]
 )
